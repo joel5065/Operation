@@ -1,26 +1,14 @@
-{% load static %}
+{% extends 'OperationAA/base.html'%}
+{% block title %} HOME {%endblock%}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" href="{% static 'css/style2.css' %}">
-  <title></title>
-</head>
-<body>
-<div>
-      <p> <img src="{% static 'images/logArmeeAir.png'%}"/> <H id="titre"> ETAT MAJOR DE L'ARMEE DE L'AIR </H> </p>
-</div>
+{% block content%}
 
         <div id="container">
             
 
-              <input type="button" id='cellule' value='CELLULE' >
+                <input type="button" id='cellule' value='CELLULE' >
                 <input type="button" id='cellule' value='OPERATIONS' >
                 <input type="button" id='cellule' value='SITUATION TECHNIQUE' >
 
         </div>
-
- </body>
-</html>
+{%endblock%}
