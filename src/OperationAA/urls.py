@@ -20,5 +20,5 @@ from OperationAA.views import login
 urlpatterns = [
     path('', login, name="login"),
     path('admin/', admin.site.urls),
-    path('ST/',include("situationTechnique.urls")),
+    path('home/',include("mainApp.urls")),
 ]

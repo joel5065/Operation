@@ -1,12 +1,37 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Page d'Information</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="mains.css" media="screen" type="text/css" />
+  <title></title>
 </head>
 <body>
+<div>
+      <p> <img src="images/logoArmeeDeAir.png"/> <H id="titre"> ETAT MAJOR DE L'ARMEE DE L'AIR </H> </p>
+</div>
 
-<h1>Bonjour {{prenom | upper}} </h1>
 
 
-</body>
-</html> 
+        <div id="container">
+            <!-- zone de connexion -->
+
+            <form action="verification.php" method="POST">
+                <h1>Connexion</h1>
+
+                <label><b>Nom d'utilisateur</b></label>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+                <label><b>Mot de passe</b></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+                <input type="submit" id='submit' value='LOGIN' >
+                <a href="welcome.html">Page suivante</a>
+
+
+            </form>
+        </div>
+
+
+ </body>
+ </html>
