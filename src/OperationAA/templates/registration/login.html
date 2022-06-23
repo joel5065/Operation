@@ -1,16 +1,22 @@
-{% extends 'base.html'%}
+{% extends 'OperationAA/base.html'%}
 
-{% block title %} Connexion {%endblock%}
+{% block title %} Register {%endblock%}
 
 {% block content%}
+ <div id="container">
 
-            <form method="POST">
 
-              {% csrf_token%}
-              {{ form.as_p}}
+  <form method="POST">
 
-              <!--   <button type="submit"> Login </button>  --> 
-              <input type="submit" id='submit' value='LOGIN' >
+    {% csrf_token%}
+    {{ form.as_p}}
+
+    <input type="submit" id='submit' value='LOGIN' >
+
+  
+  </form>
+
+
+ </div>
             
-            </form>
 {%endblock%}
