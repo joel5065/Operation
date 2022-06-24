@@ -1,11 +1,11 @@
 
 from django.urls import path
-from mainApp.views import homepage
+from mainApp.views import dashboard
 
 
 
 urlpatterns = [
 
-    path('', homepage, name="main-view")
+    path('', dashboard, name="Dashboard")
 
 ]
