@@ -1,22 +1,6 @@
-from multiprocessing import context
-from django.shortcuts import redirect, render
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render
 
-
-# la vue pour enregister quelqu'un 
-def register(request):
-    form = UserCreationForm()
-
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login_url')
-    else:
-        context = {'form' : form}
-    return render(request,'accounts/register.html', context)
-
-# la vue pour sur laquelle on tombe apres l'enregistrement
+# la vue pour sur laquelle on tombe apres l'enregistrement ou apres la connexion
 def dashboard(request):
     return render(request,"mainApp/dashboard.html")
 

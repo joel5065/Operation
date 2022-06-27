@@ -4,8 +4,14 @@
 {% block content%}
 
         <div id="container">
-            
-                <h1>Bienvenue, {{user.username}}</h1>
+        {% if user.is_authenticated %}
+        <h1>Bienvenue, {{user.username}}</h1>
+       <a href="{% url 'logout'%}">Deconnexion</a>
+        {% else %}
+      <a href="{% url 'login'%}">Connexion</a>
+
+       {%endif%}
+     
 
                 <input type="button" id='cellule' value='CELLULE' >
                 <input type="button" id='cellule' value='OPERATIONS' >

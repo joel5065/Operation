@@ -8,9 +8,9 @@ body{
     /*margin-top:5%;*/
 }
 #titre{
-position: fixed;
+position: absolute;
 color: black;
-font-size: 50px;
+font-size: 30px;
 margin-top:6%;
 margin-left:7%;
 font-weight: 1000;
@@ -65,4 +65,9 @@ input[type=submit]:hover {
     border: 20px;
     cursor: pointer;
     width: 100%;
+}
+#erreur{
+   color: red;
+   font-size: 20px;
+
 }

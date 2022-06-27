@@ -12,16 +12,10 @@
 <div>
       <p> <img src="{% static 'images/logArmeeAir.png'%}"/> <H id="titre"> ETAT MAJOR DE L'ARMEE DE L'AIR </H> </p>
 </div>
-    {% block content %}
+   {% block content %}
 
-    <h1> Welcome Home</h1>
-    {% if user.is_authenticated %}
-       <a href="{% url 'logout'%}">Deconnexion</a>
-    {% else %}
-      <a href="{% url 'login_url'%}">Connexion</a>
-      <a href="{%url 'register_url'%}">S'inscrire</a>
-     {%endif}
+    
 
-    {% endblock %}
+   {% endblock %}
 </body>
 </html>
