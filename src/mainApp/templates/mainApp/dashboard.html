@@ -4,18 +4,13 @@
 {% block content%}
 
         <div id="container">
-        {% if user.is_authenticated %}
-        <h1>Bienvenue, {{user.username}}</h1>
-       <a href="{% url 'logout'%}">Deconnexion</a>
-        {% else %}
-      <a href="{% url 'login'%}">Connexion</a>
 
-       {%endif%}
+        <h2>DASHBOARD OPERATION</h2>
      
-
-                <input type="button" id='cellule' value='CELLULE' >
+                <input type="button" id='cellule' value='CELLULES' >
                 <input type="button" id='cellule' value='OPERATIONS' >
                 <input type="button" id='cellule' value='SITUATION TECHNIQUE' >
 
         </div>
+
 {%endblock%}

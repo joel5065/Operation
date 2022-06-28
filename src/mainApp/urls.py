@@ -6,6 +6,6 @@ from mainApp.views import dashboard
 
 urlpatterns = [
         
-        path('dashboard', dashboard, name="dashboard"),
+        path('', dashboard, name="dashboard"),
     
 ]

@@ -14,6 +14,6 @@ def login(request):
             if password != 'Joel@2019' or username != 'joel':
                 return render(request,'login.html',{'error': error})
             else:
-                redirect('dashboard')
+                return redirect('dashboard')
     else:
         return render(request,'login.html')

@@ -1,14 +1,15 @@
 {% extends 'OperationAA/base.html'%}
 
-{% block title %} System Login {%endblock%}
+{% block title %} Connexion {%endblock%}
 
 {% block content%}
+
  <div id="container">
+  {% if error %}
+  <p id="erreur"> {{error}}</p>
+ {% endif %}
   <form action="login" method="POST">
     {% csrf_token %}
-    {% if error %}
-    <H id="erreur"> {{error}}</H>
-    {% endif %}
     <h1>Connexion</h1>
     <label><b>Nom d'utilisateur</b></label>
     <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
