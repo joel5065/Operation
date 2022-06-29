@@ -4,11 +4,16 @@
 
 {% block content%}
 <div id="container">
-  <form action="" method="POST">
+  <ul>
+    {% for message in messages %}
+    <li> {{ message }}</li>
+    {% endfor %}
+  </ul>
+  <form method="POST" action="">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" id='submit' value='Enregistrer' >
-    <a href="">Se connecter</a>
+    <a href=""> Se connecter</a>
  </form>
 </div>
 {%endblock%}
