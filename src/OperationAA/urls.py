@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
-from OperationAA.views import login
+from OperationAA.views import login, register
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    path('',login),
     path('login',login),
-    path('dashboard', include('mainApp.urls'))
+    path('register', register),
+    path('', include('mainApp.urls'))
     
 ]

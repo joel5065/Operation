@@ -1,0 +1,14 @@
+{% extends 'OperationAA/base.html'%}
+
+{% block title %} Inscription {%endblock%}
+
+{% block content%}
+<div id="container">
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" id='submit' value='Enregistrer' >
+    <a href="">Se connecter</a>
+ </form>
+</div>
+{%endblock%}

@@ -1,19 +1,33 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import  render
+from django.contrib.auth.forms import UserCreationForm
 
 
 def login(request):
-    error = " Veuillez rentrez un nom utilisateur et un mot de passe correct "
-    if len(request.POST) > 0:   # verifie si il y a une entree
-        if 'username' not in request.POST or 'password' not in request.POST:
-            return render(request, 'login.html',{'error': error})
-        else:
-            username = request.POST['username']
-            
-            password = request.POST['password']
+    form = UserCreationForm()
+    context = {'form':form}
+    return render(request,'login.html',context)
 
-            if password != 'Joel@2019' or username != 'joel':
-                return render(request,'login.html',{'error': error})
-            else:
-                return redirect('dashboard')
-    else:
-        return render(request,'login.html')
+
+def register(request):
+    form = UserCreationForm()
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = {'form':form}
+    return render(request,'register.html', context)
+
+
+
+
+# def login(request):
+#     form = loginForm()
+
+#     if request.method == 'POST':
+#         form = loginForm(request.POST)
+#         if form.is_valid:
+#             return redirect('dashboard')
+
+#     context ={'form':form}
+#     return render(request, 'login.html',context)
